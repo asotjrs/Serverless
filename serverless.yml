@@ -87,7 +87,7 @@ resources:
     MyDynamoDbTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: {$self:custom.tableName}
+        TableName: ${self:custom.tableName}
         AttributeDefinitions:
           - AttributeName: ID
             AttributeType: S

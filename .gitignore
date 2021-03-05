@@ -2,3 +2,4 @@ node_modules
 UploadData/
 package-lock.json
 .idea/
+.serverless/
