@@ -20,29 +20,22 @@ const Dynamo={
         console.log(data);
         return data.Item;
     },
-    async write(data,TableName){
 
+    async write(data,TableName){
         if (!data.ID){
             throw Error('no ID in the data');
         }
-
         const params={
             TableName,
             Item: data
         };
-
         const res=await documentClient.put(params).promise();
 
         if(!res){
             throw  Error(`there was an error inserting ID ${data.ID} in table ${TableName}`)
         }
-
-        return data;
-
-    }
-
-
-
-}
+           return data;
+    },
+};
 
 module.exports = Dynamo;

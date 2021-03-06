@@ -2,7 +2,7 @@ const Responses=require('../common/API_Responses');
 const tableName= process.env.tableName;
 const Dynamo= require('../common/Dynamo');
 
-exports.handler = async (event) => {
+exports.handler = async event => {
     console.log(event);
 
     if (!event.pathParameters || !event.pathParameters.ID) {
